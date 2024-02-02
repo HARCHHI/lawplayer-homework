@@ -34,7 +34,7 @@ npm install
 npm test # all unit tests
 ```
 
-### 部署方式
+## 部署方式
 
 所有相依服務、環境變數細節都可以參考docker-compose.example.yaml設定
 
