@@ -1,11 +1,15 @@
+export type PostStatusEnum = 'IDLE' | 'UPLOADING' | 'DONE' | 'ERROR';
+
 export interface Post {
   id: number;
   coverUrl: string;
   imgurCoverUrl: string | null;
-  status: 'IDLE' | 'UPLOADING' | 'DONE' | 'ERROR';
+  status: PostStatusEnum;
 }
 
 export interface PostTable {
-  posts: Post[];
+  posts: {
+    [key: number]: Post;
+  };
   cursor: number;
 }
